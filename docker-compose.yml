@@ -8,7 +8,7 @@ services:
       - PGID=1000
       - TZ=America/Toronto
     volumes:
-      - /home/ced/emby:/config
+      - ~/emby:/config
       - /media/tvshows:/data/tvshows
       - /media/movies:/data/movies
     ports:
@@ -24,7 +24,7 @@ services:
       - PGID=1000
       - TZ=America/Toronto
     volumes:
-      - /home/ced/jellyfin:/config
+      - ~/jellyfin:/config
       - /media/tvshows:/data/tvshows
       - /media/movies:/data/movies
     ports:
@@ -45,7 +45,7 @@ services:
       - UMASK=002
       - TZ=America/Toronto
     volumes:
-      - /home/ced/prowlarr:/config
+      - ~/prowlarr:/config
     restart: unless-stopped
       
   sonarr:
@@ -56,7 +56,7 @@ services:
       - PGID=1000
       - TZ=America/Toronto
     volumes:
-      - /home/ced/sonarr:/config
+      - ~/sonarr:/config
       - /media/tvshows:/tv #optional
       - /media/downloads:/downloads #optional
     ports:
@@ -71,7 +71,7 @@ services:
       - PGID=1000
       - TZ=America/Toronto
     volumes:
-      - /home/ced/radarr:/config
+      - ~/radarr:/config
       - /media/movies:/movies #optional
       - /media/downloads:/downloads #optional
     ports:
@@ -87,7 +87,7 @@ services:
       - TZ=America/Toronto
       - DELUGE_LOGLEVEL=error #optional
     volumes:
-      - /home/ced/deluge:/config
+      - ~/deluge:/config
       - /media/downloads:/downloads
     ports:
       - 8112:8112
